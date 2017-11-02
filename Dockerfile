@@ -6,7 +6,7 @@ USER root
 RUN apt-get update \
 && apt-get install -y --no-install-recommends \
    software-properties-common \
-   curl dos2unix dnsutils \
+   curl dos2unix dnsutils && \
    apt-get purge && \
    apt-get clean && \
    rm -rf /var/lib/apt/lists/*
@@ -39,5 +39,3 @@ RUN git config --global core.autocrlf input
 EXPOSE 80 443 2015
 
 USER ${NB_USER}
-
-CMD jupyter notebook --ip 0.0.0.0
