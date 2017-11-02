@@ -19,7 +19,7 @@ RUN cd ~ && wget https://github.com/github/hub/releases/download/v2.2.9/hub-linu
 && hub version
 
 # install R packages
-RUN . etc/environment \
+RUN . /etc/environment \
 && r -e 'devtools::install_github(c("rstudio/bookdown","1beb/RGoogleDrive"))' \
 && r -e 'warnings()'
 
