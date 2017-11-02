@@ -23,7 +23,7 @@ RUN . /etc/environment \
 && r -e 'devtools::install_github(c("rstudio/bookdown","1beb/RGoogleDrive"))' \
 && r -e 'warnings()'
 
-RUN . etc/environment \
+RUN . /etc/environment \
 && install2.r --repos $MRAN --deps TRUE \
 	stargazer \
 	httr \
