@@ -36,7 +36,7 @@ RUN curl https://getcaddy.com | bash -s personal
 # fun with line endings
 RUN git config --global core.autocrlf input
 
-ENV ROOT TRUE
+RUN adduser rstudio sudo
 
 EXPOSE 80 443 2015
 
