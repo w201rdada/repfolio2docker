@@ -33,7 +33,7 @@ RUN . /etc/environment \
 && r -e 'warnings()'
 
 # add caddy web server
-RUN curl https://getcaddy.com | bash
+RUN curl https://getcaddy.com | bash -s personal
 
 # fun with line endings
 RUN git config --global core.autocrlf input
