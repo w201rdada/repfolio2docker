@@ -22,7 +22,6 @@ RUN cd ~ && wget https://github.com/github/hub/releases/download/v2.2.9/hub-linu
 
 RUN . /etc/environment \
 && install2.r --repos $MRAN --deps TRUE \
-	stargazer \
 	httr \
 	kableExtra \
 	XML \
@@ -30,7 +29,7 @@ RUN . /etc/environment \
 
 # install R packages
 RUN . /etc/environment \
-&& r -e 'devtools::install_github(c("rstudio/bookdown","1beb/RGoogleDrive"))' \
+&& r -e 'devtools::install_github(c("rstudio/bookdown","1beb/RGoogleDrive","cran/stargazer"))' \
 && r -e 'warnings()'
 
 # add caddy web server
