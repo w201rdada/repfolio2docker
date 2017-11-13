@@ -1,4 +1,4 @@
-FROM w201rdada/portfolio:7b39d5b
+FROM w201rdada/binder:7b39d5b
 MAINTAINER "Brooks Ambrose" brooksambrose@berkeley.edu
 
 USER root
