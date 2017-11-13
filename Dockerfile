@@ -1,8 +1,6 @@
 FROM w201rdada/portfolio:7b39d5b
 MAINTAINER "Brooks Ambrose" brooksambrose@berkeley.edu
 
-RUN echo
-
 USER root
 
 RUN apt-get update \
