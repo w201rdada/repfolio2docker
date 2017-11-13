@@ -36,6 +36,8 @@ RUN curl https://getcaddy.com | bash -s personal
 # fun with line endings
 RUN git config --global core.autocrlf input
 
+ENV ROOT TRUE
+
 EXPOSE 80 443 2015
 
 USER ${NB_USER}
