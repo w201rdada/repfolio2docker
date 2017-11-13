@@ -22,7 +22,8 @@ RUN cd ~ && wget https://github.com/github/hub/releases/download/v2.2.9/hub-linu
 
 RUN . /etc/environment \
 && install2.r --repos $MRAN --deps TRUE \
-	httr \
+#	stargazer \
+#	httr \
 	kableExtra \
 	XML \
 && r -e 'warnings()'
