@@ -1,4 +1,4 @@
-FROM rocker/binder:3.4.1
+FROM rocker/binder:3.4.2
 MAINTAINER "Brooks Ambrose" brooksambrose@berkeley.edu
 
 RUN echo
@@ -20,8 +20,7 @@ RUN cd ~ && wget https://github.com/github/hub/releases/download/v2.2.9/hub-linu
 && rm -rf hub* \
 && hub version
 
-RUN . /etc/environment \
-&& install2.r --repos $MRAN --deps TRUE \
+RUN install2.r --deps TRUE \
 	stargazer \
 	httr \
 	kableExtra \
