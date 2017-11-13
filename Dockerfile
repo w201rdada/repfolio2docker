@@ -20,7 +20,7 @@ RUN cd ~ && wget https://github.com/github/hub/releases/download/v2.2.9/hub-linu
 && rm -rf hub* \
 && hub version
 
-RUN install2.r --deps TRUE \
+RUN install2.r --repos "https://cloud.r-project.org" --deps TRUE \
 	stargazer \
 	httr \
 	kableExtra \
