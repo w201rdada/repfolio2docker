@@ -1,4 +1,4 @@
-FROM rocker/binder:3.4.2
+FROM w201rdada/portfolio:7b39d5b
 MAINTAINER "Brooks Ambrose" brooksambrose@berkeley.edu
 
 RUN echo
