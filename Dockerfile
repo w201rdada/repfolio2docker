@@ -33,11 +33,9 @@ RUN . /etc/environment \
 # add caddy web server
 RUN curl https://getcaddy.com | bash -s personal
 
-# fun with line endings
-RUN git config --global core.autocrlf input
-
-RUN adduser rstudio sudo
-
 EXPOSE 80 443 2015
 
 USER ${NB_USER}
+
+# fun with line endings
+RUN git config --global core.autocrlf input
