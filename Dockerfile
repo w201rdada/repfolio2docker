@@ -33,6 +33,12 @@ RUN . /etc/environment \
 # add caddy web server
 RUN curl https://getcaddy.com | bash -s personal
 
+# move above
+RUN install2.r --repos "https://cloud.r-project.org" --deps TRUE \
+	DiagramR \
+&& r -e 'warnings()'
+
+
 EXPOSE 80 443 2015
 
 USER ${NB_USER}
