@@ -35,7 +35,7 @@ RUN curl https://getcaddy.com | bash -s personal
 
 # move above
 RUN install2.r --repos "https://cloud.r-project.org" --deps TRUE \
-	DiagramR \
+	DiagrammeR \
 && r -e 'warnings()'
 
 
