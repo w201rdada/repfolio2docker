@@ -27,7 +27,7 @@ RUN install2.r --repos "https://cloud.r-project.org" --deps TRUE \
 
 # install R packages
 RUN . /etc/environment \
-&& r -e 'devtools::install_github(c("rstudio/bookdown","1beb/RGoogleDrive"))' \
+&& r -e 'devtools::install_github(c("rstudio/bookdown","1beb/RGoogleDrive","viridis"))' \
 && r -e 'warnings()'
 
 # add caddy web server
